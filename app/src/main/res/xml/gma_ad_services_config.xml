@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config>
+    <!-- API de Attribution Reporting -->
+    <attribution allowAdPartnersToAccess="1234567890,0987654321" allowAllToAccess="false" />
+
+    <!-- API de Topics -->
+    <topics allowAdPartnersToAccess="1234567890,0987654321" allowAllToAccess="false" />
+
+    <!-- API de Protected Audience on Android -->
+    <custom-audiences allowAdPartnersToAccess="1234567890,0987654321" allowAllToAccess="false" />
+</ad-services-config>

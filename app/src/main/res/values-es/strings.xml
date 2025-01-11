@@ -1,0 +1,80 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Xhat</string>
+    <string name="app_logo_description">Logotipo de la aplicación</string>
+    <string name="app_logo">Logotipo de Xhat</string>
+
+    <!-- Descripciones de accesibilidad -->
+    <string name="start_call_button_description">Iniciar una llamada</string>
+    <string name="end_call_button_description">Finalizar la llamada</string>
+    <string name="mute_button_description">Silenciar o activar el micrófono</string>
+    <string name="hangup_button_description">Finalizar la llamada</string>
+    <string name="switch_camera_button_description">Cambiar la cámara</string>
+    <string name="logo_description">Descripción del logotipo de la app</string>
+
+    <!-- Cadenas generales -->
+    <string name="phone_number">Número de teléfono</string>
+    <string name="please_wait">Por favor, espera...</string>
+    <string name="enter_phone_number">Ingresa tu número de teléfono</string>
+    <string name="send_verification_code">Enviar el código de verificación</string>
+    <string name="enter_verification_code">Ingresa el código de verificación</string>
+    <string name="verify">Verificar</string>
+    <string name="verification_successful">¡La verificación fue exitosa!</string>
+    <string name="verification_failed">La verificación falló. Inténtalo de nuevo.</string>
+    <string name="empty_phone_number">Por favor, ingresa un número válido</string>
+    <string name="empty_verification_code">Por favor, ingresa el código de verificación</string>
+    <string name="enter_valid_number">Por favor, ingresa un número de teléfono válido</string>
+    <string name="enter_code">Por favor, ingresa el código de verificación</string>
+    <string name="send_code">Enviar el código</string>
+    <string name="verification_code">Código de verificación</string>
+    <string name="verify_code">Verificar el código</string>
+    <string name="search_communities">Buscar comunidades</string>
+    <string name="create_new_channel">Crear un nuevo canal</string>
+
+    <!-- Cadenas de recuperación por correo -->
+    <string name="email_send_failed">Error al enviar el correo</string>
+    <string name="enter_recovery_email">Ingresa tu correo de recuperación</string>
+    <string name="recover_with_email">Recuperar usando correo</string>
+    <string name="recovery_email_sent">El correo de recuperación fue enviado</string>
+    <string name="recovery_email_failed">Error al enviar el correo de recuperación</string>
+    <string name="no_recovery_email">No hay un correo de recuperación registrado</string>
+    <string name="enter_email">Ingresa tu correo (opcional)</string>
+    <string name="email_recovery_title">Recupera tu cuenta por correo</string>
+    <string name="save_email">Guardar correo</string>
+
+    <!-- Funciones -->
+    <string name="stories">Historias</string>
+    <string name="communities">Comunidades</string>
+    <string name="channels">Canales</string>
+    <string name="chats">Chats</string>
+    <string name="create_new_chat">Crear un nuevo chat</string>
+    <string name="create_new_community">Crear una nueva comunidad</string>
+    <string name="create_story">Crear una historia</string>
+    <string name="view_stories">Ver historias</string>
+    <string name="create_channel">Crear un canal</string>
+    <string name="community_name_hint">Nombre de la comunidad</string>
+    <string name="community_description_hint">Descripción de la comunidad</string>
+    <string name="create_community">Crear una comunidad</string>
+    <string name="join_community">Unirse a una comunidad</string>
+    <string name="join_channel">Unirse a un canal</string>
+    <string name="profile_picture">Foto de perfil</string>
+
+    <!-- Interacción del usuario -->
+    <string name="send_message">Enviar un mensaje</string>
+    <string name="receive_message">Recibir un mensaje</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="settings">Configuraciones</string>
+    <string name="profile">Perfil</string>
+    <string name="logout">Cerrar sesión</string>
+
+    <!-- Mensajes Toast para CallActivity -->
+    <string name="call_started">La llamada ha comenzado</string>
+    <string name="call_ended">La llamada ha terminado</string>
+    <string name="mic_muted">Micrófono silenciado</string>
+    <string name="call_hung_up">La llamada se ha colgado</string>
+    <string name="camera_switched">Cámara cambiada con éxito</string>
+
+    <!-- Cadenas de ayuda -->
+    <string name="verification_help">¿Necesitas ayuda? Contacta con soporte.</string>
+    <string name="bienvenido_a_xhat">Bienvenido a Xhat!</string>
+</resources>

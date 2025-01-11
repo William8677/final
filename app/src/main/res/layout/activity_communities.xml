@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- Define variables para Data Binding si es necesario -->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <!-- Barra superior con logo y nombre -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@android:color/holo_purple"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:contentDescription="@string/app_logo_description" />
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Botón para crear una nueva comunidad -->
+        <ImageButton
+            android:id="@+id/btnCreateCommunity"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_add"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/create_new_community"
+            android:layout_below="@id/topBar"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp" />
+
+        <!-- RecyclerView para mostrar las comunidades -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCommunities"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/topBar"
+            android:layout_above="@id/inputLayout"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:clipToPadding="false" />
+
+        <!-- Input layout o barra inferior -->
+        <LinearLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:elevation="4dp">
+
+            <EditText
+                android:id="@+id/etCommunitySearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/search_communities"
+                android:padding="8dp"
+                android:background="@android:drawable/edit_text"
+                android:inputType="text" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/search_communities" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

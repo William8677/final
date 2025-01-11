@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <!-- Configuración para copias de seguridad en la nube -->
+    <cloud-backup>
+        <!-- Incluir datos esenciales para respaldar -->
+        <include domain="database" path="user_messages.db" />
+        <include domain="database" path="user_contacts.db" />
+        <include domain="sharedpref" path="user_settings.xml" />
+        <include domain="file" path="media/files/" />
+
+        <!-- Excluir datos no críticos -->
+        <exclude domain="cache" />
+        <exclude domain="file" path="temp/" />
+        <exclude domain="database" path="temporary_sessions.db" />
+    </cloud-backup>
+
+    <!-- Configuración para transferencia entre dispositivos -->
+    <device-transfer>
+        <!-- Incluir datos críticos que deben transferirse -->
+        <include domain="database" path="user_messages.db" />
+        <include domain="database" path="user_contacts.db" />
+        <include domain="sharedpref" path="user_settings.xml" />
+        <include domain="file" path="media/files/" />
+
+        <!-- Excluir datos no necesarios durante la transferencia -->
+        <exclude domain="cache" />
+        <exclude domain="file" path="temp/" />
+    </device-transfer>
+</data-extraction-rules>
