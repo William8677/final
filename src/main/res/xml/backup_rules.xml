@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Incluir datos importantes para respaldos -->
+    <include domain="sharedpref" path="user_settings.xml" />
+    <include domain="database" path="user_messages.db" />
+    <include domain="database" path="user_contacts.db" />
+    <include domain="file" path="media/files/" />
+
+    <!-- Excluir datos temporales o no críticos -->
+    <exclude domain="cache" />
+    <exclude domain="file" path="temp/" />
+    <exclude domain="database" path="temporary_sessions.db" />
+</full-backup-content>

@@ -1,0 +1,3 @@
+<declare-styleable name="AppTheme">
+    <attr name="colorBackground" format="color" />
+</declare-styleable>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.williamfq.xhat.viewmodel.CreateCommunityViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nombre de la comunidad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/community_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="50"
+                android:text="@={viewModel.formFields.name}"
+                tools:text="Nombre de la comunidad" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Descripción de la comunidad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/community_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:text="@={viewModel.formFields.description}"
+                tools:text="Descripción de la comunidad" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Categorías -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/community_categories"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="@={viewModel.formFields.categories}"
+                tools:text="Categoría1, Categoría2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Switch privado -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchPrivate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/private_community"
+            android:checked="@{viewModel.formFields.isPrivate}"
+            android:onCheckedChanged="@{(switch, checked) -> viewModel.updatePrivate(checked)}" />
+
+        <!-- Switch restringido -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchRestricted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/restricted_community"
+            android:checked="@{viewModel.formFields.isRestricted}"
+            android:onCheckedChanged="@{(switch, checked) -> viewModel.updateRestricted(checked)}"
+            android:enabled="@{!viewModel.formFields.isPrivate}" />
+
+        <!-- Mensaje de error -->
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="@{viewModel.errorMessage != null ? android.view.View.VISIBLE : android.view.View.GONE}"
+            android:text="@{viewModel.errorMessage}"
+            tools:text="Mensaje de error"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la comunidad">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCommunityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción de la comunidad">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCommunityDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+</layout>

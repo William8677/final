@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Espacio para el logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:contentDescription="@string/app_logo"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Título de la pantalla -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="@string/enter_phone_number"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <!-- Campo de teléfono -->
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón de enviar código -->
+    <Button
+        android:id="@+id/btnSendPhoneCode"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="@string/send_code"
+        android:textColor="@android:color/white" />
+
+    <!-- Campo de correo electrónico -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:padding="10dp"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón de enviar código de verificación -->
+    <Button
+        android:id="@+id/btnSendEmailCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_verification_code"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

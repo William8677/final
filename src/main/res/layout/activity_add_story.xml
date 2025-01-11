@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Contenedor para los anuncios nativos -->
+    <LinearLayout
+        android:id="@+id/adContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo de texto para el título de la historia -->
+    <EditText
+        android:id="@+id/etStoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título de la historia"
+        android:inputType="text"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo de texto para la descripción de la historia -->
+    <EditText
+        android:id="@+id/etStoryDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción de la historia"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:gravity="top"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para subir la historia -->
+    <Button
+        android:id="@+id/btnUploadStory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subir Historia"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter verification code"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+    <EditText android:id="@+id/codeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Code"
+        android:inputType="number"
+        android:layout_marginTop="16dp" />
+    <Button android:id="@+id/verifyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#F86320"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
